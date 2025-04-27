@@ -116,14 +116,18 @@ ol { margin-bottom: 30px; }
 @media (max-width: 768px) {
     .program-header {
         padding: 40px 15px 30px;
+        margin-bottom: 30px;
     }
     
     .main-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
+        line-height: 1.3;
     }
     
     .subtitle {
         font-size: 1.2rem;
+        line-height: 1.4;
+        margin-bottom: 15px;
     }
     
     .languages {
@@ -132,6 +136,34 @@ ol { margin-bottom: 30px; }
     
     .lang-indicator {
         font-size: 0.8rem;
+    }
+    
+    .content-section {
+        padding: 15px;
+        margin-bottom: 25px;
+    }
+    
+    .section-header h2 {
+        font-size: 1.3rem;
+    }
+    
+    .tech-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .page-nav {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 5px;
+    }
+    
+    .page-nav ul {
+        min-width: 600px;
+        flex-wrap: nowrap;
+    }
+    
+    .module-header h3 {
+        font-size: 1rem;
     }
 }
 
