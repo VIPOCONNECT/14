@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>שאלון בריאות - טיפול Nd:YAG | תוכנית אקדמית מתקדמת</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #2c3e50, #4a90e2);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #4a90e2;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        
+        .form-box {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        input[type="text"],
+        input[type="tel"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .radio-group {
+            margin: 10px 0;
+        }
+        
+        .radio-group label {
+            display: inline;
+            font-weight: normal;
+            margin-right: 15px;
+        }
+        
+        .warning {
+            background-color: #fff3e0;
+            border-right: 4px solid #ff9800;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .signature {
+            margin-top: 40px;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+        
+        .signature-line {
+            display: inline-block;
+            border-bottom: 1px solid #000;
+            width: 250px;
+            margin-top: 5px;
+        }
+        
+        .print-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #2c3e50, #4a90e2);
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            margin-top: 30px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .print-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+            background: linear-gradient(135deg, #4a90e2, #2c3e50);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        @media print {
+            .print-button {
+                display: none;
+            }
+            
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                width: 100%;
+                max-width: 100%;
+                padding: 0;
+            }
+            
+            .form-box {
+                box-shadow: none;
+                padding: 0;
+            }
+            
+            header {
+                background: none;
+                color: black;
+                padding: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>שאלון בריאות - טיפול Nd:YAG 1064nm</h1>
+        </header>
+        
+        <div class="form-box">
+            <h2>פרטים אישיים</h2>
+            <div class="form-group">
+                <label for="fullName">שם מלא:</label>
+                <input type="text" id="fullName" name="fullName">
+            </div>
+            
+            <div class="form-group">
+                <label for="birthDate">תאריך לידה:</label>
+                <input type="date" id="birthDate" name="birthDate">
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">טלפון:</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            
+            <div class="form-group">
+                <label for="address">כתובת:</label>
+                <input type="text" id="address" name="address">
+            </div>
+            
+            <div class="form-group">
+                <label for="treatmentArea">אזור הטיפול:</label>
+                <input type="text" id="treatmentArea" name="treatmentArea">
+            </div>
+            
+            <h2>בריאות כללית</h2>
+            
+            <div class="form-group">
+                <label for="chronicDiseases">מחלות כרוניות (לפרט):</label>
+                <textarea id="chronicDiseases" name="chronicDiseases" rows="2"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>סכרת?</label>
+                <div class="radio-group">
+                    <input type="radio" id="diabetesYes" name="diabetes" value="yes">
+                    <label for="diabetesYes">כן</label>
+                    <input type="radio" id="diabetesNo" name="diabetes" value="no">
+                    <label for="diabetesNo">לא</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>אם כן, האם מאוזנת?</label>
+                <div class="radio-group">
+                    <input type="radio" id="diabetesBalancedYes" name="diabetesBalanced" value="yes">
+                    <label for="diabetesBalancedYes">כן</label>
+                    <input type="radio" id="diabetesBalancedNo" name="diabetesBalanced" value="no">
+                    <label for="diabetesBalancedNo">לא</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>תרופות קבועות / רואקוטן / אנטיביוטיקות רגישות לאור?</label>
+                <div class="radio-group">
+                    <input type="radio" id="medicationsYes" name="medications" value="yes">
+                    <label for="medicationsYes">כן</label>
+                    <input type="radio" id="medicationsNo" name="medications" value="no">
+                    <label for="medicationsNo">לא</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="medicationsList">אם כן, אילו תרופות?</label>
+                <textarea id="medicationsList" name="medicationsList" rows="2"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>נטילת מדללי דם?</label>
+                <div class="radio-group">
+                    <input type="radio" id="bloodThinnersYes" name="bloodThinners" value="yes">
+                    <label for="bloodThinnersYes">כן</label>
+                    <input type="radio" id="bloodThinnersNo" name="bloodThinners" value="no">
+                    <label for="bloodThinnersNo">לא</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>קוצב לב / שתלים מתכתיים באזור?</label>
+                <div class="radio-group">
+                    <input type="radio" id="implantsYes" name="implants" value="yes">
+                    <label for="implantsYes">כן</label>
+                    <input type="radio" id="implantsNo" name="implants" value="no">
+                    <label for="implantsNo">לא</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>היסטוריה של סרטן עור?</label>
+                <div class="radio-group">
+                    <input type="radio" id="skinCancerYes" name="skinCancer" value="yes">
+                    <label for="skinCancerYes">כן</label>
+                    <input type="radio" id="skinCancerNo" name="skinCancer" value="no">
+                    <label for="skinCancerNo">לא</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>קלואידים / נטייה להצטלקות?</label>
+                <div class="radio-group">
+                    <input type="radio" id="keloidsYes" name="keloids" value="yes">
+                    <label for="keloidsYes">כן</label>
+                    <input type="radio" id="keloidsNo" name="keloids" value="no">
+                    <label for="keloidsNo">לא</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>הריון / הנקה?</label>
+                <div class="radio-group">
+                    <input type="radio" id="pregnancyYes" name="pregnancy" value="yes">
+                    <label for="pregnancyYes">כן</label>
+                    <input type="radio" id="pregnancyNo" name="pregnancy" value="no">
+                    <label for="pregnancyNo">לא</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>מחלת עור פעילה (הרפס, פסוריאזיס, דלקת)?</label>
+                <div class="radio-group">
+                    <input type="radio" id="activeSkinDiseaseYes" name="activeSkinDisease" value="yes">
+                    <label for="activeSkinDiseaseYes">כן</label>
+                    <input type="radio" id="activeSkinDiseaseNo" name="activeSkinDisease" value="no">
+                    <label for="activeSkinDiseaseNo">לא</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>נגעים עוריים באזור הטיפול?</label>
+                <div class="radio-group">
+                    <input type="radio" id="lesionsYes" name="lesions" value="yes">
+                    <label for="lesionsYes">כן</label>
+                    <input type="radio" id="lesionsNo" name="lesions" value="no">
+                    <label for="lesionsNo">לא</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>טיפולים קודמים באותו אזור?</label>
+                <div class="radio-group">
+                    <input type="radio" id="previousTreatmentsYes" name="previousTreatments" value="yes">
+                    <label for="previousTreatmentsYes">כן</label>
+                    <input type="radio" id="previousTreatmentsNo" name="previousTreatments" value="no">
+                    <label for="previousTreatmentsNo">לא</label>
+                </div>
+            </div>
+            
+            <h2>שאלות לפי סוג טיפול</h2>
+            
+            <div class="form-group">
+                <label>להסרת שיער: שיער עבה / כהה?</label>
+                <div class="radio-group">
+                    <input type="radio" id="thickHairYes" name="thickHair" value="yes">
+                    <label for="thickHairYes">כן</label>
+                    <input type="radio" id="thickHairNo" name="thickHair" value="no">
+                    <label for="thickHairNo">לא</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>לנימי דם: יש נטייה לדימומים / קרישת דם?</label>
+                <div class="radio-group">
+                    <input type="radio" id="bleedingTendencyYes" name="bleedingTendency" value="yes">
+                    <label for="bleedingTendencyYes">כן</label>
+                    <input type="radio" id="bleedingTendencyNo" name="bleedingTendency" value="no">
+                    <label for="bleedingTendencyNo">לא</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>לפטרת: האם יש אישור רופא לאבחון פטרת?</label>
+                <div class="radio-group">
+                    <input type="radio" id="fungalDiagnosisYes" name="fungalDiagnosis" value="yes">
+                    <label for="fungalDiagnosisYes">כן</label>
+                    <input type="radio" id="fungalDiagnosisNo" name="fungalDiagnosis" value="no">
+                    <label for="fungalDiagnosisNo">לא</label>
+                </div>
+            </div>
+            
+            <div class="warning">
+                <h3>הנחיות:</h3>
+                <ul>
+                    <li>שימוש בקרם הגנה, הימנעות משיזוף, שמירה על היגיינה במידה ומדובר בפטרת.</li>
+                    <li>חובה אישור רופא בכל מקרה של סרטן, רואקוטן, מחלות דם, שתלים, או סיכון לפגיעת עור.</li>
+                    <li>להימנע מחשיפה לשמש 3-4 שבועות.</li>
+                    <li>להשתמש ב-SPF 50 מדי יום.</li>
+                    <li>אין לגרד את האזור או לקלף אותו.</li>
+                    <li>להימנע מבריכה / סאונה / ג'קוזי / פעילות גופנית מאומצת במשך 48 שעות.</li>
+                </ul>
+            </div>
+            
+            <div class="signature">
+                <p><strong>אישור הלקוח:</strong></p>
+                <p>אני מאשר/ת כי עניתי בכנות על כל השאלות לעיל. ידוע לי כי ייתכן ויידרש אישור רופא במקרים רפואיים מסוימים. אני מבין/ה כי הסתרת מידע רפואי עלולה לסכן את בריאותי ולפגוע באפקטיביות ובבטיחות הטיפול.</p>
+                
+                <div class="form-group">
+                    <label>חתימת הלקוח/ה:</label>
+                    <div class="signature-line"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label>תאריך:</label>
+                    <div class="signature-line"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label>חתימת המטפל/ת:</label>
+                    <div class="signature-line"></div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="print-button" onclick="window.print()">הדפס שאלון</button>
+        <a href="javascript:window.close();" class="print-button" style="margin-right: 10px;">סגור חלון</a>
+        
+        <footer>
+            <p>© 2025 תוכנית אקדמית מתקדמת בינלאומית - DERM-701. כל הזכויות שמורות.</p>
+        </footer>
+    </div>
+</body>
+</html>

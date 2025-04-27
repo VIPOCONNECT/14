@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מידע מעשי על Nd:YAG | תוכנית אקדמית מתקדמת</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #2c3e50, #4a90e2);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.2em;
+        }
+        
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #4a90e2;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        
+        h3 {
+            color: #4a90e2;
+            margin-top: 30px;
+        }
+        
+        .content-box {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .practical-tips {
+            background-color: #e8f4fd;
+            border-right: 4px solid #4a90e2;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .warning {
+            background-color: #fff3e0;
+            border-right: 4px solid #ff9800;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: right;
+        }
+        
+        th {
+            background-color: #4a90e2;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .back-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #2c3e50, #4a90e2);
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            margin-top: 30px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+            background: linear-gradient(135deg, #4a90e2, #2c3e50);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+    <style>
+    .tts-btn {
+        position: fixed;
+        top: 25px;
+        left: 25px;
+        z-index: 1000;
+        background: linear-gradient(90deg, #4a90e2, #6a82fb);
+        color: #fff;
+        border: none;
+        border-radius: 30px;
+        font-size: 1em;
+        padding: 12px 32px;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(74,144,226,0.15);
+        transition: background 0.3s;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    .tts-btn:hover {
+        background: linear-gradient(90deg, #6a82fb, #4a90e2);
+    }
+    
+    /* סגנון סרגל הניווט */
+    .nav-container {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background-color: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        border-radius: 8px;
+    }
+    
+    .page-nav ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .page-nav li {
+        margin: 0;
+        padding: 0;
+        flex-grow: 1;
+        text-align: center;
+    }
+    
+    .page-nav a {
+        display: block;
+        padding: 15px 10px;
+        color: #2c3e50;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        border-bottom: 3px solid transparent;
+    }
+    
+    .page-nav a:hover, .page-nav a.active {
+        color: #4a90e2;
+        border-bottom: 3px solid #4a90e2;
+        background-color: rgba(74, 144, 226, 0.05);
+    }
+    
+    @media (max-width: 768px) {
+        .page-nav ul {
+            flex-direction: column;
+        }
+        
+        .page-nav a {
+            padding: 10px;
+            border-bottom: none;
+            border-right: 3px solid transparent;
+        }
+        
+        .page-nav a:hover, .page-nav a.active {
+            border-bottom: none;
+            border-right: 3px solid #4a90e2;
+        }
+    }
+    </style>
+    <script>
+    let ttsActive = false;
+    let synth = window.speechSynthesis;
+    let utterance;
+    function toggleTTS() {
+        if (!ttsActive) {
+            let text = document.querySelector('.container').innerText;
+            utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'he-IL';
+            utterance.rate = 1.03;
+            utterance.onend = () => {
+                document.getElementById('tts-btn').innerText = '🔊 הפעל קריינות';
+                ttsActive = false;
+            };
+            synth.speak(utterance);
+            document.getElementById('tts-btn').innerText = '⏹️ עצור קריינות';
+            ttsActive = true;
+        } else {
+            synth.cancel();
+            document.getElementById('tts-btn').innerText = '🔊 הפעל קריינות';
+            ttsActive = false;
+        }
+    }
+    </script>
+    
+    <!-- JavaScript לסרגל הניווט -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // קבלת כל הקישורים בסרגל הניווט
+        const navLinks = document.querySelectorAll('.page-nav a');
+        
+        // הוספת אירוע לחיצה לכל קישור
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // קבלת המזהה של האלמנט אליו צריך לגלול
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                // גלילה חלקה לאלמנט
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // פונקציה להדגשת הקישור הפעיל בעת גלילה
+        function highlightActiveLink() {
+            const scrollPosition = window.scrollY;
+            
+            // בדיקה איזה חלק נמצא כרגע בתצוגה
+            document.querySelectorAll('.content-box').forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionBottom = sectionTop + section.offsetHeight;
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                    const currentId = section.getAttribute('id');
+                    
+                    // הסרת הדגשה מכל הקישורים
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    
+                    // הדגשת הקישור המתאים
+                    const activeLink = document.querySelector(`.page-nav a[href="#${currentId}"]`);
+                    if (activeLink) {
+                        activeLink.classList.add('active');
+                    }
+                }
+            });
+        }
+        
+        // הפעלת הפונקציה בעת גלילה
+        window.addEventListener('scroll', highlightActiveLink);
+        
+        // הפעלה ראשונית
+        highlightActiveLink();
+    });
+    </script>
+</head>
+<body>
+    <button id="tts-btn" class="tts-btn" onclick="toggleTTS()">🔊 הפעל קריינות</button>
+    <div class="container">
+        <header>
+            <h1>מידע מעשי על טכנולוגיית Nd:YAG</h1>
+        </header>
+        
+        <!-- סרגל ניווט -->
+        <div class="nav-container">
+            <nav class="page-nav">
+                <ul>
+                    <li><a href="#overview" class="active">סקירה כללית</a></li>
+                    <li><a href="#protocol">פרוטוקולי טיפול</a></li>
+                    <li><a href="#comparison">השוואה</a></li>
+                    <li><a href="#assessment">שאלות אבחון</a></li>
+                    <li><a href="#marketing">טיפים לשיווק</a></li>
+                    <li><a href="#training">תרחישי אימון</a></li>
+                    <li><a href="#maintenance">תחזוקה</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div id="overview" class="content-box">
+            <h2>סקירה כללית של טכנולוגיית Nd:YAG</h2>
+            
+            <h3>מה זה Nd:YAG ואיך זה עובד?</h3>
+            <p>לייזר Nd:YAG פועל באורך גל של 1064 ננומטר. זהו לייזר חזק מאוד שחודר עמוק לתוך שכבת הדרמיס ומאפשר טיפול בבעיות שנמצאות בעומק העור, כולל זקיקי שיער עבים, כלי דם עמוקים ופטרת ציפורניים.</p>
+            
+            <p>המפתח: חדירה עמוקה עם סיכון נמוך לפגיעה בשכבות העליונות של העור, ולכן מתאים גם לעור כהה מאוד (Fitzpatrick V-VI).</p>
+            
+            <p>עיקרון הפעולה: ספיגת אנרגיית הלייזר ע"י המטרה (מלנין בשיער, המוגלובין בכלי דם, פורפירינים בפטרת) והפיכתה לחום, שגורם להרס מבוקר של היעד.</p>
+            
+            <h3>שימושים עיקריים בטכנולוגיה</h3>
+            <ol>
+                <li><strong>הסרת שיער בעור כהה מאוד ושיער עבה.</strong></li>
+                <li><strong>טיפול בנימי דם עמוקים, במיוחד ברגליים.</strong></li>
+                <li><strong>טיפול בפטרת ציפורניים (Onychomycosis).</strong></li>
+                <li><strong>Carbon Peel</strong> (ניקוי פנים פחם / Laser Toning – אם יש Q-Switch במכשיר).</li>
+            </ol>
+            
+            <div class="practical-tips">
+                <h3>יתרונות השיטה</h3>
+                <ul>
+                    <li><strong>בטיחות:</strong> בטוח לעור כהה (לא פוגע באפידרמיס)</li>
+                    <li><strong>יעילות:</strong> מתאים לשיער עבה במיוחד ולאזורים בעייתיים (גב, מפשעות, רגליים)</li>
+                    <li><strong>רב-תכליתיות:</strong> יעיל לטיפול בכלי דם בעומק העור</li>
+                    <li><strong>טיפולי עור:</strong> אופציה ל-Carbon Peel לחידוש עור (במכשירים בעלי Q-Switch)</li>
+                </ul>
+            </div>
+            
+            <div class="warning">
+                <h3>חסרונות / מגבלות</h3>
+                <ul>
+                    <li><strong>מהירות:</strong> טיפול איטי יותר באזורים גדולים</li>
+                    <li><strong>נוחות:</strong> עלול להיות כואב יותר (דורש קירור חזק)</li>
+                    <li><strong>מגבלות צבע:</strong> לא יעיל לשיער פלומתי, לבן, אפור או ג'ינג'י</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div id="protocol" class="content-box">
+            <h2>פרוטוקולי טיפול מעשיים</h2>
+            
+            <h3>פרוטוקולי טיפולים עיקריים</h3>
+            
+            <h4>1. הסרת שיער לעור כהה מאוד (Fitzpatrick V-VI)</h4>
+            <ul>
+                <li><strong>Energy:</strong> 20-40 J/cm² (בהתאם לעובי השיער)</li>
+                <li><strong>Pulse Width:</strong> 20-50ms (עור כהה → פולסים ארוכים)</li>
+                <li><strong>Frequency:</strong> 1-3Hz</li>
+                <li><strong>Spot Size:</strong> 6-12mm</li>
+                <li><strong>קירור:</strong> חובה! Blower / Contact Cooling</li>
+            </ul>
+            
+            <h4>2. טיפול בנימי דם עמוקים (Leg Veins)</h4>
+            <ul>
+                <li><strong>Energy:</strong> 80-140 J/cm² (בהתאם לגודל הווריד)</li>
+                <li><strong>Pulse Width:</strong> 20-50ms</li>
+                <li><strong>Spot Size:</strong> קטן יחסית (3-6mm)</li>
+                <li><strong>שיטת טיפול:</strong> יריות ממוקדות בלבד (Shot by Shot)</li>
+            </ul>
+            
+            <h4>3. פטרת ציפורניים (Onychomycosis)</h4>
+            <ul>
+                <li><strong>Energy:</strong> 20-50 J/cm²</li>
+                <li><strong>Pulse Width:</strong> 30-50ms</li>
+                <li><strong>טיפול:</strong> יריות בכל פני הציפורן, כולל האזור הסובב, 2-4 מעברים</li>
+                <li><strong>תדירות:</strong> כל 2-4 שבועות, 4-8 טיפולים</li>
+            </ul>
+            
+            <h4>4. Carbon Peel (Laser Toning – עם Q-Switch בלבד)</h4>
+            <ul>
+                <li><strong>סוג לייזר:</strong> Q-Switched 1064nm</li>
+                <li><strong>חומר:</strong> שימוש בפחם רפואי (Nanocarbon Lotion)</li>
+                <li><strong>עוצמה:</strong> נמוכה – עד 1000mJ</li>
+                <li><strong>מטרה:</strong> ניקוי עמוק, הקטנת נקבוביות, עור שמן, איזון טון העור</li>
+                <li><strong>מספר טיפולים:</strong> 4-8 טיפולים, כל 2-3 שבועות</li>
+            </ul>
+            
+            <h3>שלבי עבודה להסרת שיער / כלי דם / פטרת</h3>
+            <ol>
+                <li><strong>הכנה:</strong> פתיחת תיק לקוח + חתימת טפסים (בריאות, הסכמה)</li>
+                <li><strong>בדיקה מקדימה:</strong> ביצוע Patch Test במידת הצורך</li>
+                <li><strong>הכנת האזור:</strong> גילוח (בהסרת שיער בלבד), חיטוי אזור</li>
+                <li><strong>כיוון המכשיר:</strong> התאמת Spot Size, עוצמה, Pulse Width לפי סוג הטיפול</li>
+                <li><strong>ביצוע הטיפול:</strong> יריות ממוקדות (Shot by Shot), חפיפה של 10-20%</li>
+                <li><strong>מעקב:</strong> מעקב אחרי תגובת העור (אודם קל / נפיחות סביב השערה – תגובה רצויה)</li>
+            </ol>
+            
+            <h3>מספר טיפולים ומרווחים</h3>
+            <ul>
+                <li><strong>הסרת שיער:</strong> 6-10 טיפולים, כל 6-8 שבועות</li>
+                <li><strong>כלי דם:</strong> 3-5 טיפולים, כל 4-6 שבועות</li>
+                <li><strong>פטרת ציפורניים:</strong> 4-8 טיפולים, כל 2-4 שבועות</li>
+                <li><strong>Carbon Peel:</strong> 4-8 טיפולים, כל 2-3 שבועות</li>
+            </ul>
+        </div>
+        
+        <div class="content-box">
+            <h2>בטיחות והנחיות למטופל</h2>
+            
+            <h3>תופעות לוואי ואיך להימנע מהן</h3>
+            <table>
+                <tr>
+                    <th>תופעת לוואי</th>
+                    <th>סיבה אפשרית</th>
+                    <th>מניעה</th>
+                </tr>
+                <tr>
+                    <td>אדמומיות וצריבה</td>
+                    <td>תגובה נורמלית לטיפול</td>
+                    <td>קירור מספק לפני, במהלך ואחרי הטיפול</td>
+                </tr>
+                <tr>
+                    <td>שלפוחיות</td>
+                    <td>עוצמה גבוהה מדי</td>
+                    <td>התאמת פרמטרים נכונה, ביצוע טסט מקדים</td>
+                </tr>
+                <tr>
+                    <td>היפר/היפופיגמנטציה</td>
+                    <td>פגיעה במלנוציטים</td>
+                    <td>פרמטרים מותאמים לסוג העור, הימנעות מחשיפה לשמש</td>
+                </tr>
+                <tr>
+                    <td>צלקות</td>
+                    <td>עוצמה גבוהה מדי, זיהום</td>
+                    <td>פרמטרים נכונים, היגיינה, טיפול נכון בכוויות</td>
+                </tr>
+                <tr>
+                    <td>כאב מוגבר</td>
+                    <td>קירור לא מספק</td>
+                    <td>קירור אופטימלי, שימוש באלחוש מקומי במידת הצורך</td>
+                </tr>
+            </table>
+            
+            <h3>הנחיות ללקוח אחרי טיפול Nd:YAG</h3>
+            <ul>
+                <li>להימנע מחשיפה לשמש 3-4 שבועות</li>
+                <li>להשתמש ב-SPF 50 מדי יום</li>
+                <li>אין לגרד את האזור או לקלף אותו</li>
+                <li>להימנע מבריכה / סאונה / ג'קוזי / פעילות גופנית מאומצת במשך 48 שעות</li>
+                <li>בפטרת: שמירה על היגיינת כפות רגליים, החלפת גרביים יומית, חיטוי נעליים</li>
+            </ul>
+            
+            <div class="warning">
+                <h3>התוויות נגד</h3>
+                <ul>
+                    <li>הריון והנקה</li>
+                    <li>מחלות עור פעילות באזור הטיפול</li>
+                    <li>נטילת תרופות פוטוסנסיטיביות (רואקוטן, אנטיביוטיקות מסוימות)</li>
+                    <li>היסטוריה של קלואידים או צלקות היפרטרופיות</li>
+                    <li>מחלות אוטואימוניות פעילות</li>
+                    <li>סרטן עור בהיסטוריה</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div id="assessment" class="content-box">
+            <h2>שאלות אבחון למטופלים</h2>
+            
+            <ol>
+                <li><strong id="question-1">למה Nd:YAG מתאים יותר לעור כהה מלייזר דיודה?</strong>
+                    <p>תשובה: אורך הגל הארוך יותר (1064nm) חודר עמוק יותר ונספג פחות במלנין שבאפידרמיס, מה שמפחית את הסיכון לפגיעה בעור הכהה.</p>
+                </li>
+{{ ... }}
+                
+                <li><strong>מה ההבדל בין Pulse Width קצר לארוך?</strong>
+                    <p>תשובה: פולסים קצרים מתאימים לשיער דק ועור בהיר, בעוד פולסים ארוכים (20-50ms) מתאימים לעור כהה ושיער עבה, כיוון שהם מאפשרים פיזור חום הדרגתי ומפחיתים נזק לאפידרמיס.</p>
+                </li>
+                
+                <li><strong>איך יודעים לבחור בין Nd:YAG לבין IPL בנימי דם?</strong>
+                    <p>תשובה: Nd:YAG מתאים לכלי דם עמוקים ורחבים (כמו ורידי רגליים), בעוד ש-IPL מתאים יותר לנימים שטחיים ודקים (כמו באזור הפנים). בנוסף, Nd:YAG בטוח יותר לעור כהה.</p>
+                </li>
+                
+                <li><strong>מתי יש צורך להפסיק סדרת טיפולים?</strong>
+                    <p>תשובה: יש להפסיק טיפולים במקרים של: תגובה חריגה (שלפוחיות, היפופיגמנטציה), זיהום, צלקות, או כאשר המטופל מדווח על תופעות לוואי חריגות שאינן חולפות.</p>
+                </li>
+                
+                <li><strong>אילו סיבוכים יכולים לקרות בטיפול בפטרת ואיך נמנעים מהם?</strong>
+                    <p>תשובה: הסיבוכים העיקריים הם כוויות בעור סביב הציפורן, כאב מוגבר, והחמרה זמנית במראה הציפורן. ניתן למנוע אותם על ידי: התאמת פרמטרים נכונה, קירור מספק, הקפדה על מיקוד הלייזר בציפורן בלבד, והנחיות היגיינה מדויקות למטופל.</p>
+                </li>
+            </ol>
+        </div>
+        
+        <div id="comparison" class="content-box">
+            <h2>השוואה בין Nd:YAG לטכנולוגיות אחרות</h2>
+            
+            <p>הבנת ההבדלים בין Nd:YAG לבין טכנולוגיות אחרות חיונית לבחירת הטיפול המתאים ביותר לכל מטופל. הטבלה הבאה מציגה השוואה מקיפה בין Nd:YAG, לייזר דיודה ו-IPL:</p>
+            
+            <table>
+                <tr>
+                    <th>מאפיין</th>
+                    <th>Nd:YAG (1064nm)</th>
+                    <th>לייזר דיודה (810nm)</th>
+                    <th>IPL (500-1200nm)</th>
+                    <th>מתי לבחור Nd:YAG</th>
+                </tr>
+                <tr>
+                    <td>אורך גל</td>
+                    <td>1064nm (ארוך)</td>
+                    <td>810nm (בינוני)</td>
+                    <td>500-1200nm (טווח רחב)</td>
+                    <td>כשנדרשת חדירה עמוקה מאוד עם פגיעה מינימלית באפידרמיס</td>
+                </tr>
+                <tr>
+                    <td>עומק חדירה</td>
+                    <td>עמוק מאוד (4-6 מ"מ)</td>
+                    <td>עמוק (2-4 מ"מ)</td>
+                    <td>שטחי-בינוני (1-3 מ"מ)</td>
+                    <td>לטיפול במטרות עמוקות (ורידים, זקיקי שיער עמוקים)</td>
+                </tr>
+                <tr>
+                    <td>התאמה לסוגי עור</td>
+                    <td>מתאים לכל סוגי העור (I-VI)</td>
+                    <td>מתאים לסוגי עור I-V</td>
+                    <td>מתאים בעיקר לסוגי עור I-IV</td>
+                    <td>לעור כהה מאוד (V-VI) או מטופלים עם סיכון גבוה להיפרפיגמנטציה</td>
+                </tr>
+                <tr>
+                    <td>יעילות בהסרת שיער</td>
+                    <td>גבוהה לשיער עבה וכהה</td>
+                    <td>גבוהה מאוד לרוב סוגי השיער</td>
+                    <td>בינונית, יעילה לשיער דק עד בינוני</td>
+                    <td>לשיער עבה בעור כהה מאוד, או באזורים עמידים לטיפולים אחרים</td>
+                </tr>
+                <tr>
+                    <td>טיפול בכלי דם</td>
+                    <td>מצוין לכלי דם עמוקים ורחבים</td>
+                    <td>מוגבל</td>
+                    <td>יעיל לנימים שטחיים ודקים</td>
+                    <td>לטיפול בורידי רגליים ונימים עמוקים</td>
+                </tr>
+                <tr>
+                    <td>כאב וחוסר נוחות</td>
+                    <td>בינוני-גבוה</td>
+                    <td>בינוני (תלוי בקירור)</td>
+                    <td>נמוך-בינוני</td>
+                    <td>כשיעילות חשובה יותר מנוחות, ויש אפשרות לקירור מתקדם</td>
+                </tr>
+                <tr>
+                    <td>מהירות טיפול</td>
+                    <td>איטי יחסית</td>
+                    <td>מהיר (ראשים גדולים)</td>
+                    <td>בינוני</td>
+                    <td>כשדיוק ובטיחות חשובים יותר ממהירות</td>
+                </tr>
+                <tr>
+                    <td>שימושים ייחודיים</td>
+                    <td>פטרת ציפורניים, Carbon Peel</td>
+                    <td>הסרת שיער יעילה</td>
+                    <td>טיפולי עור מגוונים</td>
+                    <td>לפטרת ציפורניים או Carbon Peel (עם Q-Switch)</td>
+                </tr>
+                <tr>
+                    <td>עלות טיפול</td>
+                    <td>גבוהה</td>
+                    <td>בינונית-גבוהה</td>
+                    <td>נמוכה-בינונית</td>
+                    <td>כשנדרשת טכנולוגיה מתקדמת למקרים מורכבים</td>
+                </tr>
+            </table>
+            
+            <h3>יתרונות ייחודיים של Nd:YAG</h3>
+            <div class="practical-tips">
+                <ul>
+                    <li><strong>בטיחות מקסימלית לעור כהה:</strong> בזכות אורך הגל הארוך (1064nm), Nd:YAG נספג פחות במלנין שבאפידרמיס, מה שמפחית משמעותית את הסיכון לכוויות ושינויי פיגמנטציה בעור כהה.</li>
+                    <li><strong>חדירה עמוקה:</strong> מגיע לעומק רב יותר מטכנולוגיות אחרות, מה שמאפשר טיפול יעיל בכלי דם עמוקים וזקיקי שיער עמוקים.</li>
+                    <li><strong>יכולת טיפול בפטרת ציפורניים:</strong> אחת הטכנולוגיות היחידות שמאפשרת טיפול יעיל בפטרת ציפורניים באמצעות חימום סלקטיבי של הפטרייה.</li>
+                    <li><strong>אפשרות ל-Carbon Peel:</strong> במכשירים עם Q-Switch, מאפשר טיפולי Carbon Peel לחידוש עור, הקטנת נקבוביות וטיפול בעור שמנוני.</li>
+                </ul>
+            </div>
+            
+            <h3>מתי להעדיף טכנולוגיות אחרות</h3>
+            <div class="warning">
+                <ul>
+                    <li><strong>להעדיף לייזר דיודה כאשר:</strong> נדרשת מהירות טיפול גבוהה, מטפלים באזורים גדולים, המטופל בעל עור בהיר עד בינוני, ונדרשת יעילות מקסימלית בהסרת שיער.</li>
+                    <li><strong>להעדיף IPL כאשר:</strong> נדרש טיפול במגוון בעיות עור שטחיות (כתמי פיגמנטציה, נימים דקים, אקנה), המטופל בעל עור בהיר, ונדרשת אי-נוחות מינימלית.</li>
+                </ul>
+            </div>
+            
+            <h3>שאלות אבחון למטופל לפני טיפול Nd:YAG</h3>
+            <p>שאלות האבחון הבאות יסייעו לך לקבוע אם המטופל מתאים לטיפול Nd:YAG ולהתאים את הטיפול לצרכיו הספציפיים:</p>
+            
+            <div class="practical-tips">
+                <ol>
+                    <li><strong>שאלות רפואיות בסיסיות:</strong>
+                        <ul>
+                            <li>האם את/ה בהיריון או מניקה?</li>
+                            <li>האם יש לך מחלות אוטואימוניות פעילות?</li>
+                            <li>האם יש לך היסטוריה של קלואיד או צלקות היפרטרופיות?</li>
+                            <li>האם את/ה נוטל/ת תרופות כלשהן? אילו? (במיוחד רואקוטן או תרופות פוטוסנסיטיביות)</li>
+                            <li>האם יש לך היסטוריה של הרפס או זיהומים עוריים באזור הטיפול?</li>
+                        </ul>
+                    </li>
+                    <li><strong>שאלות הקשורות לעור:</strong>
+                        <ul>
+                            <li>מהו סוג העור שלך לפי סולם פיצפטריק (I-VI)?</li>
+                            <li>האם העור שלך נשרף בקלות בשמש או משתזף?</li>
+                            <li>האם נחשפת לשמש בשבועיים האחרונים?</li>
+                            <li>האם יש לך נטייה לשינויי פיגמנטציה?</li>
+                            <li>האם יש לך תנאים דרמטולוגיים פעילים באזור הטיפול?</li>
+                        </ul>
+                    </li>
+                    <li><strong>שאלות ספציפיות להסרת שיער:</strong>
+                        <ul>
+                            <li>מהו צבע השיער באזור הטיפול?</li>
+                            <li>מהי צפיפות וסוג השיער? (דק, בינוני, עבה)</li>
+                            <li>האם ניסית בעבר טכנולוגיות אחרות להסרת שיער? מה היו התוצאות?</li>
+                            <li>האם יש לך בעיות הורמונליות המשפיעות על צמיחת השיער?</li>
+                        </ul>
+                    </li>
+                    <li><strong>שאלות ספציפיות לטיפול בכלי דם:</strong>
+                        <ul>
+                            <li>מתי הופיעו הנימים/ורידים לראשונה?</li>
+                            <li>האם הם גורמים לכאב או אי-נוחות?</li>
+                            <li>האם בוצעה הערכה רפואית לשלילת בעיות מערכתיות?</li>
+                            <li>האם ניסית טיפולים קודמים? אילו ומה היו התוצאות?</li>
+                        </ul>
+                    </li>
+                    <li><strong>שאלות ספציפיות לפטרת ציפורניים:</strong>
+                        <ul>
+                            <li>האם אובחנה פטרת על ידי רופא/פודיאטר?</li>
+                            <li>כמה זמן קיימת הפטרת?</li>
+                            <li>האם ניסית טיפולים תרופתיים? אילו ומה היו התוצאות?</li>
+                            <li>האם יש לך סוכרת או בעיות בזרימת הדם לגפיים?</li>
+                        </ul>
+                    </li>
+                    <li><strong>שאלות הקשורות לציפיות:</strong>
+                        <ul>
+                            <li>מהן הציפיות שלך מהטיפול?</li>
+                            <li>האם את/ה מודע/ת לכך שיידרשו מספר טיפולים להשגת התוצאות הרצויות?</li>
+                            <li>האם את/ה מבין/ה את המגבלות של טיפולי Nd:YAG?</li>
+                            <li>האם יש לך אירועים מיוחדים בקרוב שעשויים להשפיע על לוח הזמנים של הטיפולים?</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div id="training" class="content-box">
+            <h2>תרחישי אימון - מקרים לתרגול</h2>
+            
+            <p>להלן מספר תרחישים המדמים מצבים אמיתיים בקליניקה. חשוב לחשוב על האופן שבו תטפל בכל מקרה:</p>
+            
+            <div class="practical-tips">
+                <ol>
+                    <li><strong>מקרה 1: אישה בת 32 עם עור כהה מאוד (Fitzpatrick VI) ושיער שחור עבה באזור הפנים</strong>
+                        <ul>
+                            <li><strong>מטרה:</strong> הסרת שיער בפנים</li>
+                            <li><strong>אתגר:</strong> עור כהה מאוד עם סיכון גבוה לשינויי פיגמנטציה</li>
+                            <li><strong>שאלות לדיון:</strong>
+                                <ol>
+                                    <li>מדוע Nd:YAG הוא הבחירה הטובה ביותר למקרה זה?</li>
+                                    <li>אילו פרמטרים תבחר ומדוע?</li>
+                                    <li>אילו אמצעי זהירות נוספים תנקוט?</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><strong>מקרה 2: גבר בן 45 עם ורידים רחבים ברגליים</strong>
+                        <ul>
+                            <li><strong>מטרה:</strong> טיפול בורידים ברגליים</li>
+                            <li><strong>אתגר:</strong> ורידים עמוקים ורחבים בקוטר 2-3 מ"מ</li>
+                            <li><strong>שאלות לדיון:</strong>
+                                <ol>
+                                    <li>אילו בדיקות מקדימות נדרשות לפני טיפול בורידים?</li>
+                                    <li>אילו פרמטרים תבחר לורידים בקוטר זה?</li>
+                                    <li>אילו תופעות לוואי צפויות ואיך תנהל אותן?</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><strong>מקרה 3: אישה בת 50 עם פטרת ציפורניים בכל הציפורניים בכף הרגל</strong>
+                        <ul>
+                            <li><strong>מטרה:</strong> טיפול בפטרת ציפורניים</li>
+                            <li><strong>אתגר:</strong> פטרת ציפורניים עיקשת שלא הגיבה לטיפולים תרופתיים</li>
+                            <li><strong>שאלות לדיון:</strong>
+                                <ol>
+                                    <li>אילו בדיקות יש לבצע לפני הטיפול?</li>
+                                    <li>איך תתאים את הפרמטרים לטיפול בפטרת?</li>
+                                    <li>אילו הנחיות תיתן למטופלת לאחר הטיפול?</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><strong>מקרה 4: מטופל שפיתח שלפוחיות ואדמומיות חזקה לאחר טיפול Nd:YAG ראשון</strong>
+                        <ul>
+                            <li><strong>מטרה:</strong> טיפול בתגובה ומניעת הישנות</li>
+                            <li><strong>אתגר:</strong> תגובה חריגה לטיפול וחשש המטופל מהמשך</li>
+                            <li><strong>שאלות לדיון:</strong>
+                                <ol>
+                                    <li>כיצד תטפל בתגובה החריגה?</li>
+                                    <li>אילו שינויים תעשה בפרמטרים בטיפול הבא?</li>
+                                    <li>כיצד תרגיע את חששות המטופל?</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><strong>מקרה 5: מטופלת שעברה 6 טיפולי הסרת שיער בלייזר דיודה ללא תוצאות משמעותיות</strong>
+                        <ul>
+                            <li><strong>מטרה:</strong> הסרת שיער באזור הסנטר</li>
+                            <li><strong>אתגר:</strong> שיער עמיד לטיפולי לייזר דיודה</li>
+                            <li><strong>שאלות לדיון:</strong>
+                                <ol>
+                                    <li>מדוע Nd:YAG עשוי להיות יעיל יותר במקרה זה?</li>
+                                    <li>אילו פרמטרים תבחר ומדוע?</li>
+                                    <li>כיצד תנהל את ציפיות המטופלת?</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div id="maintenance" class="content-box">
+            <h2>תחזוקת מכשיר ה-Nd:YAG</h2>
+            
+            <p>תחזוקה נכונה של מכשיר ה-Nd:YAG חיונית לשמירה על ביצועים אופטימליים, אורך חיים ארוך של המכשיר, ובטיחות המטופלים. להלן הנחיות תחזוקה חשובות:</p>
+            
+            <h3>תחזוקה יומית</h3>
+            <ul>
+                <li><strong>ניקוי ראש הטיפול:</strong> נקה את חלון הספיר/זכוכית בראש הטיפול בעזרת מטלית רכה וחומר ניקוי ייעודי או אלכוהול 70%. וודא שאין שאריות ג'ל, שמן או לכלוך שעלולים לפגוע בהעברת האנרגיה.</li>
+                <li><strong>בדיקת מערכת הקירור:</strong> וודא שמערכת הקירור פועלת כראוי ושאין דליפות מים.</li>
+                <li><strong>בדיקת כיול:</strong> בצע בדיקת כיול יומית בהתאם להוראות היצרן לוודא שהמכשיר מספק את רמת האנרגיה המוצגת.</li>
+            </ul>
+            
+            <h3>תחזוקה שבועית</h3>
+            <ul>
+                <li><strong>ניקוי מסנני אוויר:</strong> נקה את מסנני האוויר של המכשיר למניעת התחממות יתר.</li>
+                <li><strong>בדיקת כבלים וחיבורים:</strong> בדוק את תקינות כל הכבלים והחיבורים, וודא שאין סימני בלאי או נזק.</li>
+                <li><strong>ניקוי יסודי של ראשי הטיפול:</strong> פרק את ראשי הטיפול (אם אפשרי לפי הוראות היצרן) ונקה אותם ביסודיות.</li>
+            </ul>
+            
+            <h3>תחזוקה חודשית</h3>
+            <ul>
+                <li><strong>החלפת מים במערכת הקירור:</strong> במכשירים עם מערכת קירור מים סגורה, החלף את המים ו/או הוסף תוסף אנטי-אצות בהתאם להמלצות היצרן.</li>
+                <li><strong>כיול מקיף:</strong> בצע בדיקת כיול מקיפה יותר של רמות האנרגיה והפרמטרים השונים.</li>
+                <li><strong>בדיקת מערכת החשמל:</strong> וודא שאין בעיות במערכת החשמל של המכשיר.</li>
+            </ul>
+            
+            <h3>תחזוקה שנתית</h3>
+            <ul>
+                <li><strong>טיפול מקיף על ידי טכנאי מוסמך:</strong> הזמן טכנאי מוסמך מטעם היצרן או הספק לביצוע טיפול מקיף.</li>
+                <li><strong>החלפת חלקים מתכלים:</strong> החלף נורות פלש, מסננים, אטמים וחלקים מתכלים אחרים בהתאם להמלצות היצרן.</li>
+                <li><strong>כיול מחדש:</strong> בצע כיול מחדש של כל מערכות המכשיר.</li>
+            </ul>
+            
+            <div class="warning">
+                <h3>אזהרות חשובות</h3>
+                <ul>
+                    <li><strong>לעולם אל תנסה לתקן את המכשיר בעצמך:</strong> תיקונים פנימיים צריכים להתבצע רק על ידי טכנאי מוסמך.</li>
+                    <li><strong>אל תשתמש במכשיר אם יש סימני נזק:</strong> אם יש סימני נזק לכבלים, חיבורים, או מערכת החשמל, אל תפעיל את המכשיר עד לבדיקת טכנאי.</li>
+                    <li><strong>שמור על רשומות תחזוקה:</strong> נהל יומן תחזוקה מסודר הכולל את כל הטיפולים, הבדיקות והתיקונים שבוצעו במכשיר.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="marketing" class="content-box">
+            <h2>טיפים לשיווק טיפולי Nd:YAG</h2>
+            
+            <p>להלן מספר טיפים שיעזרו לך להסביר את יתרונות טיפולי Nd:YAG למטופלים פוטנציאליים ולשווק את השירות בצורה אפקטיבית:</p>
+            
+            <div class="practical-tips">
+                <h3>שיווק הסרת שיער ב-Nd:YAG</h3>
+                <ul>
+                    <li><strong>הדגשת הבטיחות לעור כהה:</strong>
+                        <ul>
+                            <li>"טכנולוגיית Nd:YAG היא הבטוחה ביותר לעור כהה, מה שמפחית משמעותית את הסיכון לשינויי פיגמנטציה"</li>
+                            <li>"אורך הגל הארוך של Nd:YAG מאפשר טיפול בטוח גם בעור כהה מאוד (סוגים V-VI) שאינו מתאים לטכנולוגיות אחרות"</li>
+                        </ul>
+                    </li>
+                    <li><strong>הדגשת היעילות לשיער עבה ועיקש:</strong>
+                        <ul>
+                            <li>"החדירה העמוקה של Nd:YAG מאפשרת להגיע לזקיקי שיער עמוקים ועיקשים שלא מגיבים לטיפולים אחרים"</li>
+                            <li>"הפתרון האולטימטיבי לאזורים עיקשים כמו גב גברים, פנים ואזור הביקיני"</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h3>שיווק טיפול בכלי דם ב-Nd:YAG</h3>
+                <ul>
+                    <li><strong>הדגשת היכולת לטפל בורידים עמוקים:</strong>
+                        <ul>
+                            <li>"הטכנולוגיה היחידה שמגיעה לעומק הדרוש לטיפול בורידי רגליים באופן לא פולשני"</li>
+                            <li>"פתרון אסתטי לורידים ללא צורך בהזרקות או ניתוח"</li>
+                        </ul>
+                    </li>
+                    <li><strong>הדגשת היתרון לעומת טיפולים אחרים:</strong>
+                        <ul>
+                            <li>"בניגוד ל-IPL שמתאים לנימים שטחיים בלבד, Nd:YAG מטפל ביעילות גם בכלי דם עמוקים ורחבים"</li>
+                            <li>"טיפול בטוח גם למטופלים עם עור כהה, מה שלא מתאפשר בטכנולוגיות אחרות"</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h3>שיווק טיפול בפטרת ציפורניים</h3>
+                <ul>
+                    <li><strong>הדגשת הייחודיות:</strong>
+                        <ul>
+                            <li>"טיפול חדשני לפטרת ציפורניים ללא תרופות וללא תופעות לוואי מערכתיות"</li>
+                            <li>"הפתרון היחיד שמגיע לעומק הציפורן ומחסל את הפטרייה במקור"</li>
+                        </ul>
+                    </li>
+                    <li><strong>הדגשת היתרונות לעומת טיפולים תרופתיים:</strong>
+                        <ul>
+                            <li>"טיפול מקומי ללא צורך בנטילת תרופות פומיות שעלולות לפגוע בכבד"</li>
+                            <li>"יעיל גם במקרים של פטרת ציפורניים עיקשת שלא מגיבה לטיפולים תרופתיים"</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h3>טיפים כלליים לשיווק טיפולי Nd:YAG</h3>
+                <ul>
+                    <li><strong>שימוש בתמונות לפני/אחרי:</strong>
+                        <ul>
+                            <li>הצגת תוצאות אמיתיות ממטופלים קודמים (בהסכמתם)</li>
+                            <li>הסבר על התהליך והתוצאות הצפויות בכל שלב</li>
+                        </ul>
+                    </li>
+                    <li><strong>הצעת חבילות וקידום מכירות:</strong>
+                        <ul>
+                            <li>"רכישת סדרת טיפולים מראש מעניקה חיסכון משמעותי"</li>
+                            <li>"הבא/י חבר/ה ותקבל/י הנחה בטיפול הבא"</li>
+                        </ul>
+                    </li>
+                    <li><strong>הדגשת הטכנולוגיה המתקדמת:</strong>
+                        <ul>
+                            <li>"טיפול בטכנולוגיה מתקדמת המשמשת את המרכזים הרפואיים המובילים בעולם"</li>
+                            <li>"פתרון אולטימטיבי למקרים מורכבים שלא הגיבו לטיפולים אחרים"</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <a href="javascript:window.close();" class="back-button">סגור חלון</a>
+        
+        <footer>
+            <p>© 2025 תוכנית אקדמית מתקדמת בינלאומית - DERM-701. כל הזכויות שמורות.</p>
+        </footer>
+    </div>
+</body>
+</html>
