@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>תוכנית אקדמית מתקדמת בינלאומית - טיפול בלייזר דרמטולוגי והסרת שיער לרופאים</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mobile.css">
     <style>
         /* עיצוב כפתורי הטכנולוגיות */
         .tech-buttons {
@@ -14,6 +15,16 @@
             gap: 10px;
             margin: 20px 0;
             justify-content: center;
+        }
+        
+        /* הגדרות מובייל מוטמעות */
+        @media only screen and (max-width: 768px) {
+            .tech-card .tech-button {
+                display: block !important;
+                width: 100%;
+                margin-top: 10px;
+                border-radius: 8px;
+            }
         }
         
         .tech-button {
@@ -276,6 +287,11 @@
     
     <!-- סרגל ניווט -->
     <div class="nav-container">
+        <button class="mobile-menu-toggle" aria-label="תפריט ניווט">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <nav class="page-nav">
             <ul>
                 <li><a href="#about" class="active">אודות התוכנית</a></li>
@@ -650,22 +666,22 @@
                         <div class="tech-card">
                             <h3>לייזר דיודה</h3>
                             <p>טכנולוגיית לייזר מתקדמת המבוססת על מוליכים למחצה, יעילה במיוחד להסרת שיער ומגוון טיפולי עור.</p>
-                            <button class="tech-button" onclick="window.open('diode-laser.html', '_blank')">מידע מעשי על לייזר דיודה</button>
+                            <button class="tech-button" onclick="window.open('https://vipoconnect.github.io/14/diode-laser.html', '_blank')" style="display: block !important;">מידע מקצועי על לייזר דיודה</button>
                         </div>
                         <div class="tech-card">
                             <h3>IPL - אור פולסי עוצמתי</h3>
                             <p>טכנולוגיה המבוססת על אור לא-קוהרנטי בטווח אורכי גל רחב, המאפשרת טיפול במגוון בעיות עור.</p>
-                            <button class="tech-button" onclick="window.open('ipl.html', '_blank')">מידע מעשי על IPL</button>
+                            <button class="tech-button" onclick="window.open('https://vipoconnect.github.io/14/ipl.html', '_blank')" style="display: block !important;">מידע מקצועי על IPL</button>
                         </div>
                         <div class="tech-card">
                             <h3>Nd:YAG</h3>
                             <p>לייזר מוצק עם אורך גל ארוך (1064nm) המאפשר חדירה עמוקה יותר לרקמה, מתאים במיוחד לעור כהה.</p>
-                            <button class="tech-button" onclick="window.open('ndyag.html', '_blank')">מידע מעשי על Nd:YAG</button>
+                            <button class="tech-button" onclick="window.open('https://vipoconnect.github.io/14/ndyag.html', '_blank')" style="display: block !important;">מידע מקצועי על Nd:YAG</button>
                         </div>
                         <div class="tech-card">
                             <h3>מערכות RF</h3>
                             <p>טכנולוגיה המבוססת על תדרי רדיו להעברת אנרגיה תרמית לרקמות עמוקות, יעילה במיוחד למיצוק עור ועיצוב גוף.</p>
-                            <button class="tech-button" onclick="window.open('rf.html', '_blank')">מידע מעשי על מערכות RF</button>
+                            <button class="tech-button" onclick="window.open('https://vipoconnect.github.io/14/rf.html', '_blank')" style="display: block !important;">מידע מקצועי על מערכות RF</button>
                         </div>
                     </div>
                     
@@ -1603,6 +1619,28 @@
             section.classList.add('expanded');
             section.classList.remove('collapsed');
         });
+        
+        // פונקציונליות תפריט מובייל
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const pageNav = document.querySelector('.page-nav');
+        
+        if (mobileMenuToggle && pageNav) {
+            mobileMenuToggle.addEventListener('click', function() {
+                pageNav.classList.toggle('expanded');
+                this.classList.toggle('active');
+            });
+            
+            // סגירת התפריט בעת לחיצה על קישור
+            const navLinks = pageNav.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth <= 768) {
+                        pageNav.classList.remove('expanded');
+                        mobileMenuToggle.classList.remove('active');
+                    }
+                });
+            });
+        }
     });
 </script>
 

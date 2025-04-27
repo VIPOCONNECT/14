@@ -1,0 +1,266 @@
+/* קובץ CSS ייעודי לתצוגת מובייל */
+@media only screen and (max-width: 768px) {
+    /* הגדרות כלליות */
+    body {
+        font-size: 16px;
+        line-height: 1.5;
+        overflow-x: hidden;
+        padding-top: 60px; /* מרווח עליון למניעת הסתרה על ידי סרגל הכלים */
+    }
+    
+    .container {
+        width: 100%;
+        padding: 10px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    /* כותרת ראשית */
+    .program-header {
+        padding: 25px 15px 20px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+    }
+    
+    .header-content {
+        padding: 0;
+    }
+    
+    .main-title {
+        font-size: 1.5rem;
+        line-height: 1.3;
+        margin-bottom: 10px;
+        word-break: keep-all;
+        hyphens: none;
+        white-space: normal;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+        line-height: 1.4;
+        margin-bottom: 10px;
+        word-break: keep-all;
+        hyphens: none;
+        white-space: normal;
+    }
+    
+    .languages {
+        padding: 5px 10px;
+        margin-top: 5px;
+    }
+    
+    .lang-indicator {
+        font-size: 0.7rem;
+    }
+    
+    /* תפריט ניווט */
+    .nav-container {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1000;
+        margin-bottom: 0;
+        border-radius: 0;
+        overflow: visible;
+    }
+    
+    .page-nav {
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        max-height: 50px;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+    
+    .page-nav.expanded {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+    
+    /* כפתור המבורגר */
+    .mobile-menu-toggle {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 1001;
+        padding: 8px;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .mobile-menu-toggle:hover {
+        background-color: rgba(0,0,0,0.05);
+    }
+    
+    .mobile-menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px 0;
+        background-color: #2c3e50;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+        transform-origin: center;
+    }
+    
+    /* אנימציית X כשהתפריט פתוח */
+    .mobile-menu-toggle.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    .page-nav ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .page-nav li {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .page-nav li:last-child {
+        border-bottom: none;
+    }
+    
+    .page-nav a {
+        display: block;
+        padding: 12px 15px;
+        text-align: right;
+        font-size: 0.9rem;
+    }
+    
+    /* סקציות תוכן */
+    .content-section {
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+    }
+    
+    .section-header {
+        padding-bottom: 8px;
+        margin-bottom: 10px;
+    }
+    
+    .section-header h2 {
+        font-size: 1.2rem;
+    }
+    
+    .section-icon {
+        font-size: 1.2rem;
+        margin-left: 8px;
+    }
+    
+    .section-toggle {
+        font-size: 1.2rem;
+    }
+    
+    /* מודולים בסילבוס */
+    .module-accordion {
+        margin-bottom: 10px;
+    }
+    
+    .module-header {
+        padding: 12px;
+    }
+    
+    .module-header h3 {
+        font-size: 1rem;
+    }
+    
+    /* כרטיסיות טכנולוגיה */
+    .tech-cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .tech-card {
+        padding: 12px;
+    }
+    
+    .tech-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+    
+    /* כפתורי הטכנולוגיות */
+    .tech-buttons {
+        display: none; /* משאיר את הכפתורים הנפרדים מוסתרים */
+    }
+    
+    .tech-button {
+        width: 100%;
+        padding: 15px;
+        font-size: 14px;
+        text-align: center;
+        border-radius: 8px;
+        display: block !important; /* מבטיח שהכפתורים מוצגים */
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+        background: linear-gradient(135deg, #2c3e50, #4a90e2) !important;
+        color: white !important;
+        border: none !important;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+        transition: all 0.3s ease !important;
+        font-weight: bold !important;
+    }
+    
+    /* מציג את הכפתורים בתוך כרטיסיות הטכנולוגיה במובייל */
+    .tech-card .tech-button {
+        display: block !important;
+        margin-top: 15px;
+    }
+    
+    /* טבלאות */
+    .comparison-table {
+        font-size: 0.9rem;
+    }
+    
+    .comparison-table th, 
+    .comparison-table td {
+        padding: 8px;
+    }
+    
+    /* תיקון לטקסט שנשבר */
+    h1, h2, h3, p {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        max-width: 100%;
+    }
+    
+    /* הסתרת תפריט צד במובייל */
+    .side-menu {
+        display: none !important;
+    }
+    
+    /* כפתור קריין */
+    #narrator-button {
+        top: 10px;
+        left: 10px;
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .narrator-icon {
+        width: 16px;
+        height: 16px;
+    }
+}
